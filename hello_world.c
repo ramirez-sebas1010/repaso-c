@@ -54,10 +54,23 @@ int main(){
 	//Declaracion de un puntero a int
 	int *pInt = &dato;
 	int **p = &pInt;
-	printf("El dato es %d y esta en la direccion de memoria %p", *pInt,pInt);
+	printf("El dato es %d y esta en la direccion de memoria %p\n", *pInt,pInt);
 
 
-	int a[10];
+	int a[10] ={1,2,3,4,5,6,7,8,9,10};
+	
+	//De ambas formas siempre apuntamos a la direccion de memoria del primer elemento.
+	int *punteroArray1 = &a[0];
+	int *punteroArray2 = a;
+
+	printf("PUNTEROS\n");
+	//Podemos incremetar el puntero para poder avanzar en el arreglo ya que en un arreglo su memoria es contigua 
+	for (size_t i = 0; i < 10; i++){
+		printf("%d\n",a[i]);
+		printf("%d\n",*punteroArray1);
+		punteroArray1++;
+	}
+	
 
 
 	return 0;

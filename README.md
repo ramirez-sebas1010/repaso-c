@@ -37,7 +37,7 @@ int esPar(int num){
 }
 ```
 
-## Punteros
+## Introduccion a Punteros
 ### Los Punteros son Variables que Guardan Direccion de memoria.
 Usuamos "&" para acceder a la direccion de memoria y "*" para obtener su valor.
 ```c
@@ -58,6 +58,29 @@ int main(){
     printf("p1 = %d",*p1);
     printf("p2 = %d",*(*p2))
 
+
+    return 0;
+}
+```
+
+## Arreglos y Punteros
+
+```c
+#include<stdio.h>
+
+int main(){
+    int a[10] ={1,2,3,4,5,6,7,8,9,10};
+	
+	//De ambas formas siempre apuntamos a la direccion de memoria del primer elemento.
+	int *punteroArray1 = &a[0];
+	int *punteroArray2 = a;
+    
+    //Podemos incremetar el puntero para poder avanzar en el arreglo ya que en un arreglo su memoria es contigua 
+	for (size_t i = 0; i < 10; i++){
+		printf("%d\n",a[i]);
+		printf("%d\n",*punteroArray1);
+		punteroArray1++;
+	}
 
     return 0;
 }
