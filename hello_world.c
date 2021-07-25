@@ -53,7 +53,12 @@ int main(){
 	//Punteros en C
 	//Declaracion de un puntero a int
 	int *pInt = &dato;
+	int **p = &pInt;
 	printf("El dato es %d y esta en la direccion de memoria %p", *pInt,pInt);
+
+
+	int a[10];
+
 
 	return 0;
 }
